@@ -1,0 +1,47 @@
+{
+  "name": "butlerbot-announce",
+  "version": "1.0.0",
+  "description": "redbrick announce plugin for butlerbot",
+  "main": "index.js",
+  "author": "butlerx <butlerx@notthe.cloud>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "format": "prettier-eslint --write \"**/*.js\" \"**/*.json\"",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-coderdojo": "^1.0.6",
+    "eslint-plugin-chai-friendly": "^0.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-lodash": "^2.4.4",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
+    "prettier-eslint-cli": "^4.1.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "@std/esm": {
+    "esm": "js",
+    "cjs": "true"
+  },
+  "dependencies": {
+    "@std/esm": "^0.2.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "node-schedule": "^1.2.5",
+    "request": "^2.34",
+    "request-promise-native": "^1.0.5"
+  }
+}
